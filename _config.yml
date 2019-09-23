@@ -1,7 +1,7 @@
 # Site settings
-title: CNN aided Monte Carlo localization for UAV
-description: "UAV navigation using machine learning and Monte Carlo localization"
-url: ""
+title: RUN - Robust UAV Localization
+description: "Robust UAV Localization using Machine Learning and Monte Carlo Localization"
+url: "https://in5490-run.github.io/"
 
 
 
@@ -10,11 +10,11 @@ url: ""
 baseurl: 
 header-img: img/home-bg.jpg
 headercolor: "#FFFFFF"
-# logo: /project-pages/img/logos/
+# logo: /img/logos/uio_seal_a_eng.png
 
 # Tertiary Parameters
-github_username: 
-project_repository: 
+github_username: in5490-run
+project_repository: in5490-run.github.io
 disqus_shortname: 
 g-analytics:
 altmetric: true
@@ -106,7 +106,7 @@ prose:
       - name: "horizontal"
         field:
           element: "hidden"
-          value: </section></section><section markdown="1" data-background="http://projectpages.github.io/project-pages/img/slidebackground.png"><section markdown="1">
+          value: </section></section><section markdown="1" data-background="http://in5490-run.github.io/project-pages/img/slidebackground.png"><section markdown="1">
       - name: "vertical"
         field:
           element: "hidden"
@@ -114,7 +114,7 @@ prose:
       - name: "slideinit"
         field:
           element: "hidden"
-          value: <section markdown="1" data-background="http://projectpages.github.io/project-pages/img/slidebackground.png"><section markdown="1">
+          value: <section markdown="1" data-background="http://in5490-run.github.io/project-pages/img/slidebackground.png"><section markdown="1">
       - name: "theme"
         field:
           element: "select"
