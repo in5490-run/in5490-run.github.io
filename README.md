@@ -1,5 +1,5 @@
 # IN5490 UAV localization project page
 
  ---
- ø
- 
+
+ Jekyll based web-page for our project.
