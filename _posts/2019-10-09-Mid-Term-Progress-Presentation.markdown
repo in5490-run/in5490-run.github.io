@@ -19,7 +19,7 @@ vertical:		</section><section markdown="1">
 
 #### {{ page.author }}
 
-#### {{ 'now' | | date: "%I:%M  - %a - %b %d %Y"}}
+#### {{ "October 18, 2019" | date: "%a - %d %b %Y"}}
 
 {{ page.horizontal }}
 <!-- Start Writing Below in Markdown -->
