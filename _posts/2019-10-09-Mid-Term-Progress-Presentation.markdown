@@ -4,7 +4,7 @@ title:     		Mid-term progress presentation
 author:     	Håkon, Ole og Vegard
 tags:           presentation 
 subtitle:    	Presentation of problem, possible solution and related work.
-mcl_video_id: "PE3V-9dEUS4?t=8"
+mcl_video_id: "Mlp27dQZ7ws?start=9&end=28"
 
 theme:		moon # default/beige/blood/moon/night/serif/simple/sky/solarized
 trans:		cube # default/cube/page/concave/zoom/linear/fade/none
@@ -37,7 +37,7 @@ vertical:		</section><section markdown="1">
 
 ## Monte Carlo Localization
 
-{% include youtubePlayer.html id=page.youtubeId %}
+{% include youtubePlayer.html id=page.mcl_video_id %}
 
 {{ page.horizontal }}
 
