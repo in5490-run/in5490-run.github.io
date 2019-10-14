@@ -1,0 +1,36 @@
+---
+layout:     	slide
+title:     		Deep CNN-Based Framework For Enhanced Aerial Imagery Registration with Applications to UAV Geolocalization
+author:     	Vegard Bergsvik Øvstegård
+tags:           presentation 
+subtitle:    	Presentation related paper.
+mcl_video_id: "Mlp27dQZ7ws?start=9&end=28"
+
+theme:		moon # default/beige/blood/moon/night/serif/simple/sky/solarized
+trans:		cube # default/cube/page/concave/zoom/linear/fade/none
+
+horizontal:	</section></section><section markdown="1" data-background=""><section markdown="1">
+vertical:		</section><section markdown="1">
+---
+<section markdown="1" data-background=""><section markdown="1">
+## {{ page.title }}
+
+<hr>
+
+#### {{ page.author }}
+
+#### {{ "October 18, 2019" | date: "%a - %d %b %Y"}}
+
+{{ page.horizontal }}
+<!-- Start Writing Below in Markdown -->
+
+## Start here
+
+<!-- End Here -->
+{{ page.horizontal }}
+
+# [Print]({{ site.url }}{{ site.baseurl }}{{ page.url }}/?print-pdf#)
+
+# [Back]({{ site.url }}{{ site.baseurl }})
+
+</section></section>
