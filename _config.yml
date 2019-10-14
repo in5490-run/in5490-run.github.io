@@ -1,10 +1,7 @@
 # Site settings
-title: RUN - Robust UAV Localization
+title: Robust UAV Localization
 description: "Robust UAV Localization using Machine Learning and Monte Carlo Localization"
 url: "https://in5490-run.github.io/"
-
-
-
 
 # Secondary Parameters
 baseurl: 
