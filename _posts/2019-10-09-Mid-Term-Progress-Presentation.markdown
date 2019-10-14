@@ -4,7 +4,7 @@ title:     		Mid-term progress presentation
 author:     	Håkon, Ole og Vegard
 tags:           presentation 
 subtitle:    	Presentation of problem, possible solution and related work.
-mcl_video_id: "Mlp27dQZ7ws?start=9&end=28"
+mcl_video_id: "Mlp27dQZ7ws?start=9"
 
 theme:		moon # default/beige/blood/moon/night/serif/simple/sky/solarized
 trans:		cube # default/cube/page/concave/zoom/linear/fade/none
@@ -19,7 +19,7 @@ vertical:		</section><section markdown="1">
 
 #### {{ page.author }}
 
-#### {{ "October 18, 2019" | date: "%a - %d %b %Y"}}
+#### {{ "October 14, 2019" | date: "%a - %d %b %Y"}}
 
 {{ page.horizontal }}
 <!-- Start Writing Below in Markdown -->
@@ -28,8 +28,8 @@ vertical:		</section><section markdown="1">
 
 * Global vs Local
 * Sensors
-    * INS
-    * Video odometry
+    * Inertial navigation system(INS)
+    * Visual odometry
     * GPS/GNSS
 * Monte Carlo Localization(MCL)
 
@@ -43,26 +43,34 @@ vertical:		</section><section markdown="1">
 
 ## Problems
 
-* Lighting conditions
-* Seasonal changes
-* Response time
-* Computational power
+* Robustness:
+    * Lighting conditions
+    * Environmental changes
+* Optimization:
+    * Response time
+    * Computational power
 
 {{ page.horizontal }}
 
-## Increasing robustness using ML
+### First priority: Increasing robustness using ML
 
-* Segmentation
+* Semantic segmentation
     * Feature extraction 
-    * Decreased work-space
+    * Faster local-localization
     * Invariance to
         * Lighting conditions
-        * Seasonal change 
+        * Environmental change 
 
 {{ page.horizontal }}
 
-## Optimizing MCL
+### 2nd priority: Optimizing MCL
 * Hush-hush / No idea yet
+
+{{ page.horizontal }}
+
+## System
+
+![System diagram](/img/system.png)
 
 {{ page.horizontal }}
 
@@ -70,16 +78,13 @@ vertical:		</section><section markdown="1">
 ### <progress value="7" max="100"></progress>
 
 * [x] Obtain data
+    * [x] Map Data
+    * [ ] Flight videos
 * [ ] Create data-set 
-    * [ ] Resolution fix 
-    * [ ] Labeling
 * [ ] Test different ML Models
     * [ ] U-NET
     * [ ] Adaptnet
-* [ ] Train model
-* [ ] Test model 
-    * [ ] Lighting changes
-    * [ ] Seasonal changes
+* [ ] Evaluate models
 * [ ] Conduct experiment with video
 * [ ] (Optional) Conduct experiment RT on drone
 * [ ] Write scientific paper and get **world famous**
