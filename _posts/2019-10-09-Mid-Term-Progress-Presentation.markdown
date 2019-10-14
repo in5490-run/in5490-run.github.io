@@ -74,6 +74,11 @@ vertical:		</section><section markdown="1">
 
 {{ page.horizontal }}
 
+
+![Comparison](/img/comparison.jpg)
+
+{{ page.horizontal }}
+
 ## Progress 7%
 ### <progress value="7" max="100"></progress>
 
