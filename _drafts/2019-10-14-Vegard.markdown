@@ -3,17 +3,17 @@ layout:     	slide
 title:     		Deep CNN-Based Framework For Enhanced Aerial Imagery Registration with Applications to UAV Geolocalization
 author:     	Vegard Bergsvik Øvstegård
 tags:           presentation 
-subtitle:    	Presentation related paper.
+subtitle:    	Presentation of a related paper.
 mcl_video_id: "Mlp27dQZ7ws?start=9&end=28"
 
 theme:		moon # default/beige/blood/moon/night/serif/simple/sky/solarized
-trans:		cube # default/cube/page/concave/zoom/linear/fade/none
+trans:		default # default/cube/page/concave/zoom/linear/fade/none
 
 horizontal:	</section></section><section markdown="1" data-background=""><section markdown="1">
 vertical:		</section><section markdown="1">
 ---
 <section markdown="1" data-background=""><section markdown="1">
-## {{ page.title }}
+### {{ page.title }}
 
 <hr>
 
@@ -24,7 +24,150 @@ vertical:		</section><section markdown="1">
 {{ page.horizontal }}
 <!-- Start Writing Below in Markdown -->
 
-## Start here
+### Components
+
+![Components](/img/components.png)
+
+{{ page.horizontal }}
+
+### Input images
+
+![Input images](/img/input_images.png)
+
+{{ page.vertical }}
+
+### Input images
+
+* On-board camera(Bird's eye view)
+    * Video frame$$_i = S_{i}$$
+* Reference image(Satellite Map)
+    * $R$
+    * Known GPS-bounds
+* Not completely Geolocalization
+    * Cheating with starting positon $$= S_1$$ 
+* Where is $$S_i$$ in $$R$$?
+
+{{ page.vertical }}
+
+$Maths..$
+![Math](/img/math.png)
+
+{{ page.vertical }}
+
+$R$
+![R_2](/img/R.png)
+
+{{ page.vertical }}
+
+![S_i](/img/S_i.png)
+
+{{ page.horizontal }}
+
+### Calibration
+
+![Calibration](/img/calibration.png)
+
+{{ page.vertical }}
+
+### Calibration
+
+* Affine geometric transformation
+    * Map $S_i$ with FOV consideration 
+        * Scale
+        * Orientation
+* Remember -> framework is cheating
+    * Reduced search space: $r = R(l, w_{s+b})$
+* Calibrates on $S_1$ and every $S_{(i+3)}$
+* Scale Invariant Feature Transform(SIFT)
+* Random Sample Consensus(RANSAC) -> Homography matrix
+    * Describes movement of UAV related to R.
+
+{{ page.vertical }}
+
+### SIFT
+
+![SIFT](/img/sift.png)
+
+{{ page.vertical }}
+
+### Homography
+
+![Homography](/img/homography.jpg)
+
+{{ page.horizontal }}
+
+### Sequential frame registration
+
+![Sequential frame registration](/img/sfr.png)
+
+{{ page.vertical }}
+
+### Sequential frame registration
+* Similar to Calibration stage
+* Every non-calibration frame
+* Uses ORB -> Homography -> Translation
+
+{{ page.vertical }}
+
+### Oriented FAST and Rotated BRIEF(ORB)
+
+![ORB](/img/orb.png)
+
+{{ page.vertical }}
+
+### ORB
+* Two orders of magnitude faster than SIFT
+* Does not handle scale variance robustly
+
+{{ page.horizontal }}
+
+### Semantic Segmentation Using U-net
+
+![U-net](/img/unet_segmentation.png)
+
+{{ page.vertical }}
+
+### U-net
+
+![U-net](/img/unet.png)
+
+{{ page.vertical }}
+
+### U-net
+
+![U-net](/img/unet_2.png)
+
+{{ page.horizontal }}
+
+### Semantic Shape Matching (SSM)
+
+![Calibration](/img/components.png)
+
+{{ page.vertical }}
+
+### Semantic Shape Matching (SSM)
+* Morphology
+    * Buildings
+    * Roads
+![U-net](/img/unet_3.png)
+
+{{ page.vertical }}
+
+### Processing U-net frames
+1. Fill gaps(Dilation -> Erosion)
+2. Remove outlier noise(Erosion - Dilation)
+3. Build dictionary of shapes
+4. Brute force matching shapes
+5. Check matches 
+
+* Calculate homography based on matched shapes
+* Adjust location 
+
+{{ page.horizontal }}
+
+### Experiments and Results
+
+{{ page.vertical }}
 
 <!-- End Here -->
 {{ page.horizontal }}
