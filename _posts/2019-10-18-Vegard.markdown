@@ -181,7 +181,7 @@ $R$
     * Famagusta 
         * YouTube Video
         * 10.4m average drift local feature mapping
-        * 3.6m average drift for SSM
+        * 5.1m average drift for SSM
         * Lower resolution for $R$ and $S$
 * Used manually-labelled GPS coordinates!
 
