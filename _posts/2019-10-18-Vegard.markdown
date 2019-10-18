@@ -189,7 +189,13 @@ $R$
 
 ### Experiments and Results
 
-![U-net](/img/results.png)
+![Results](/img/results_1.png)
+
+{{ page.vertical }}
+
+### Experiments and Results
+
+![Results](/img/results_2.png)
 
 {{ page.vertical }}
 
