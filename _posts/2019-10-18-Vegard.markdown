@@ -1,10 +1,10 @@
 ---
 layout:     	slide
 title:     		Deep CNN-Based Framework For Enhanced Aerial Imagery Registration with Applications to UAV Geolocalization
+author_2:     	Ahmed Nassar, Karim Amer, Reda ElHakim, Mohamed ElHelw
 author:     	Vegard Bergsvik Øvstegård
 tags:           presentation 
 subtitle:    	Presentation of a related paper.
-mcl_video_id: "Mlp27dQZ7ws?start=9&end=28"
 
 theme:		moon # default/beige/blood/moon/night/serif/simple/sky/solarized
 trans:		default # default/cube/page/concave/zoom/linear/fade/none
@@ -17,9 +17,13 @@ vertical:		</section><section markdown="1">
 
 <hr>
 
-#### {{ page.author }}
+#### {{ page.author_2 }}
 
-#### {{ "October 18, 2019" | date: "%a - %d %b %Y"}}
+<hr>
+
+{{ page.author }}
+
+{{ "October 18, 2019" | date: "%a - %d %b %Y"}}
 
 {{ page.horizontal }}
 <!-- Start Writing Below in Markdown -->
@@ -43,9 +47,8 @@ vertical:		</section><section markdown="1">
 * Reference image(Satellite Map)
     * $R$
     * Known GPS-bounds
-* Not completely Geolocalization
+* Not Global
     * Cheating with starting positon $$= S_1$$ 
-* Where is $$S_i$$ in $$R$$?
 
 {{ page.vertical }}
 
@@ -71,6 +74,7 @@ $R$
 
 ### Calibration
 
+* Where is $$S_i$$ in $$R$$?
 * Affine geometric transformation
     * Map $S_i$ with FOV consideration 
         * Scale
@@ -145,14 +149,6 @@ $R$
 
 {{ page.vertical }}
 
-### Semantic Shape Matching (SSM)
-* Morphology
-    * Buildings
-    * Roads
-![U-net](/img/unet_3.png)
-
-{{ page.vertical }}
-
 ### Processing U-net frames
 1. Fill gaps(Dilation -> Erosion)
 2. Remove outlier noise(Erosion - Dilation)
@@ -163,11 +159,43 @@ $R$
 * Calculate homography based on matched shapes
 * Adjust location 
 
+{{ page.vertical }}
+
+### Semantic Shape Matching (SSM)
+
+* Morphology
+    * Buildings
+    * Roads
+![U-net](/img/unet_3.png)
+
 {{ page.horizontal }}
 
 ### Experiments and Results
 
+* No real-life testing
+* Only tested on two cities
+    * Potsdam 
+        * Simulated flight with Google Earth
+        * 6.3m average drift for local feature mapping
+        * 3.6m average drift for SSM
+    * Famagusta 
+        * YouTube Video
+        * 10.4m average drift local feature mapping
+        * 3.6m average drift for SSM
+        * Lower resolution for $R$ and $S$
+* Used manually-labelled GPS coordinates!
+
 {{ page.vertical }}
+
+### Experiments and Results
+
+![U-net](/img/results.png)
+
+{{ page.vertical }}
+
+### Experiments and Results
+* Robustness? 
+* Computation?
 
 <!-- End Here -->
 {{ page.horizontal }}
